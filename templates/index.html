@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: skyblue;
+            padding-top: 40px;
+            padding-left: 400px;
+        }
+        #content{
+            border : 1px solid transparent;
+            background-color: white;
+            width: 50%;
+            border-radius: 5%;
+            text-align: center;
+        }
+        textarea{
+            height: 200px;
+            border-radius: 5%;
+            color: bisque;
+        }
+        text{
+            border-radius: 3%;
+        }
+        h2{
+            color: green;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h1{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+   
+    <diV id="content">
+    <h1>The task manager web application</h1>
+
+    {% for message in get_flashed_messages() %}
+    <h2> {{ message }}</h2>
+    {% endfor %}
+
+    <form action="save" , method="post">
+    <p>Name of the task: <input type="test" name="task" required></p>
+    <P> Task description<Textarea name="taskd" required></Textarea></P>
+    <input type="submit">
+
+    <a href="view"> View Tasks</a>
+</form>
+</div>
+</body>
+</html>
